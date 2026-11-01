@@ -1,0 +1,34 @@
+{
+  "name": "semyon-mcp",
+  "version": "0.1.0",
+  "description": "MCP server for running a small hardware-selling business: catalog, inventory, CRM, orders, support, tasks, meetings, knowledge base and automations.",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "semyon-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "seed": "tsx src/seed.ts",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node --import tsx --test --test-reporter=spec \"test/**/*.test.ts\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.5",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}
